@@ -24,6 +24,7 @@ func main() {
 	e.GET("/ping", ping)
 	e.GET("/mamot", mamot)
 	e.GET("/workshop", workshop)
+	e.GET("/workshop-devops", workshop_devops)
 
 	// Start serve
 	e.Logger.Fatal(e.Start("0.0.0.0:1323"))
@@ -44,6 +45,10 @@ func mamot(c echo.Context) error {
 
 func workshop(c echo.Context) error {
 	return c.String(http.StatusOK, "Happy workshop")
+}
+
+func workshop_devops(c echo.Context) error {
+	return c.String(http.StatusOK, "Happy workshop devops 2021")
 }
 
 func server(c echo.Context) error {
