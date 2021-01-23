@@ -26,6 +26,8 @@ func main() {
 	e.GET("/workshop", workshop)
 	e.GET("/workshop-devops", workshop_devops)
 	e.GET("/tokopedia-workshop", tokopedia_workshop)
+	e.GET("/dimas", dimas)
+	
 
 	// Start serve
 	e.Logger.Fatal(e.Start("0.0.0.0:1323"))
@@ -54,6 +56,10 @@ func workshop_devops(c echo.Context) error {
 
 func tokopedia_workshop(c echo.Context) error {
 	return c.String(http.StatusOK, "Tokopedia devops workshop 2021, Enjoy the show")
+}
+
+func dimas(c echo.Context) error {
+	return c.String(http.StatusOK, "Hallo Dimas")
 }
 
 func server(c echo.Context) error {
